@@ -136,7 +136,7 @@ let incTotalqnty = () => {
             </div>
 
 
-            {data != 0 && <div style={{ paddingLeft: "60px" }}>
+            {data.length !== 0 && <div style={{ paddingLeft: "60px" }}>
                 <img alt={data.name} src={data.image} style={{ width: "300px", height: "300px" }}></img>  {/*====================== Showing Image ==========================*/}
                 <div style={{ paddingLeft: "40px" }}>Unit Price : {price}   {/*====================== Showing Unit Price ==========================*/}
                     <label>
