@@ -1,6 +1,6 @@
 const productModel = require("../models/productModel")
 
-exports.CreateList=async (req,res)=>{
+exports.CreateProduct=async (req,res)=>{
     try {
         let data = req.body
         let {name,category,price,currencyformat,image}=data
@@ -18,7 +18,7 @@ exports.CreateList=async (req,res)=>{
     }
 }
 
-exports.GetList = async (req,res)=>{
+exports.GetProduct = async (req,res)=>{
     try {
         let {name,category}=req.body
         if(!name)return res.status(400).send({status:false,message:"Pls provide name"})
@@ -33,7 +33,7 @@ exports.GetList = async (req,res)=>{
     }
 }
 
-exports.UpdateList = async (req,res)=>{
+exports.UpdateProduct = async (req,res)=>{
     try {
         let data = req.body
         let {id,price,currencyformat,totalprice,totalquantity}=data
